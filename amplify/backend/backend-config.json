@@ -1,28 +1,23 @@
 {
   "auth": {
-    "auth4mlwithamplify": {
+    "mlwithamplify5ed25c44": {
       "service": "Cognito",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],
       "customAuth": false,
       "frontendAuthConfig": {
         "socialProviders": [],
-        "usernameAttributes": [
-          "EMAIL",
-          "PHONE_NUMBER"
-        ],
+        "usernameAttributes": [],
         "signupAttributes": [
-          "EMAIL",
-          "NAME"
+          "EMAIL"
         ],
         "passwordProtectionSettings": {
           "passwordPolicyMinLength": 8,
           "passwordPolicyCharacters": []
         },
-        "mfaConfiguration": "OPTIONAL",
+        "mfaConfiguration": "OFF",
         "mfaTypes": [
-          "SMS",
-          "TOTP"
+          "SMS"
         ],
         "verificationMechanisms": [
           "EMAIL"
