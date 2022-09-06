@@ -10,6 +10,11 @@
       "StackName": "amplify-mlwithamplify-dev-131842",
       "StackId": "arn:aws:cloudformation:ap-south-1:455756518696:stack/amplify-mlwithamplify-dev-131842/5479e360-2db8-11ed-af28-0af1a04ce344",
       "AmplifyAppId": "d32wxnkw2vu0dh"
+    },
+    "categories": {
+      "auth": {
+        "auth4mlwithamplify": {}
+      }
     }
   }
 }
