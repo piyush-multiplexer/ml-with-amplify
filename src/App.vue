@@ -2,9 +2,9 @@
   <authenticator :form-fields="formFields">
     <template v-slot="{ user, signOut }">
       <template v-if="user">
-        <router-view :user="user"></router-view>
+        <AppHeader :user="user" :sign-out="signOut"></AppHeader>
         <h1>Hello {{ user.username }}!</h1>
-        <button @click="signOut">Sign Out</button>
+        <router-view :user="user"></router-view>
       </template>
     </template>
   </authenticator>
@@ -14,6 +14,7 @@
 import "@aws-amplify/ui-vue/styles.css";
 import { Amplify, Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
+import AppHeader from "./components/app-header.vue";
 
 Amplify.configure(awsconfig);
 Auth.configure(awsconfig);
@@ -58,11 +59,5 @@ const formFields = {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-.amplify-button[data-variation="link"]:hover {
-  background: none;
-  text-decoration: underline;
 }
 </style>

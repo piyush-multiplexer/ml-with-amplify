@@ -1,7 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
+import './assets/style.css'
 import AmplifyVue from "@aws-amplify/ui-vue";
-import "@aws-amplify/ui-vue/styles.css";
 import router from "./router";
 
 const app = createApp(App);
