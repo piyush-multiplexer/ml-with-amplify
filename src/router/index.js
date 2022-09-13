@@ -4,9 +4,14 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     {
-      name: "login",
+      name: "auth",
       path: "/",
-      component: () => import("../components/login-vue.vue"),
+      component: () => import("../components/amplify-auth.vue"),
+    },
+    {
+      name: "process-data",
+      path: "/process-data",
+      component: () => import("../components/process-data.vue"),
     },
   ],
 });
