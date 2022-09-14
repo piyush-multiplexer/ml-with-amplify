@@ -3,7 +3,6 @@
     <template v-slot="{ user, signOut }">
       <template v-if="user">
         <AppHeader :user="user" :sign-out="signOut"></AppHeader>
-        <h1>Hello {{ user.username }}!</h1>
         <router-view :user="user"></router-view>
       </template>
     </template>
@@ -12,7 +11,8 @@
 
 <script setup>
 import "@aws-amplify/ui-vue/styles.css";
-import { Amplify, Auth } from "aws-amplify";
+import { onMounted } from "@vue/runtime-core";
+import { Amplify, Auth, API } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import AppHeader from "./components/app-header.vue";
 
@@ -51,6 +51,10 @@ const formFields = {
     },
   },
 };
+
+onMounted(async ()=>{
+  console.log(await API.get('expressapi','/nlp'))
+})
 </script>
 
 <style>

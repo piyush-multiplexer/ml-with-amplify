@@ -9,9 +9,9 @@ const router = createRouter({
       component: () => import("../components/amplify-auth.vue"),
     },
     {
-      name: "process-data",
-      path: "/process-data",
-      component: () => import("../components/process-data.vue"),
+      name: "text-summary",
+      path: "/text-summary",
+      component: () => import("../components/text-summary.vue"),
     },
   ],
 });

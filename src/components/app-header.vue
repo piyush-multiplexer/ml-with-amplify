@@ -14,6 +14,11 @@
           </a>
         </div>
         <div>
+          <h5>
+            {{ user.username }}
+          </h5>
+        </div>
+        <div>
           <button @click="signOut"
             class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-red border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 sm:mt-0"
           >
@@ -26,6 +31,7 @@
 </template>
 <script setup>
 import { defineProps, ref } from 'vue';
-const props = defineProps(['signOut'])
+const props = defineProps(['user','signOut'])
 const signOut = ref(props.signOut)
+const user = ref(props.user)
 </script>
