@@ -14,6 +14,12 @@
     "categories": {
       "auth": {
         "mlwithamplify5ed25c44": {}
+      },
+      "function": {
+        "amplifyexpressnlp": {
+          "deploymentBucketName": "amplify-mlwithamplify-dev-131842-deployment",
+          "s3Key": "amplify-builds/amplifyexpressnlp-51477049425446373336-build.zip"
+        }
       }
     }
   }
