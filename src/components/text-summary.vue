@@ -1,14 +1,11 @@
 <template>
   <div class="font-sans d-flex py-5 px-2">
-    <div class="flex-none">
-      <h1 class="text-3xl font-bold underline">Animation world!</h1>
-    </div>
     <div class="flex items-center mt-5 h-96">
       <div class="flex-shrink input-section w-full h-full">
         <div class="h-full">
           <label
             for="message"
-            class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
+            class="block mb-2 text-sm font-medium text-tertary"
             >Your message</label
           >
           <textarea
@@ -32,10 +29,14 @@
       <div class="flex-shrink w-full h-full">
         <label
           for="message"
-          class="block mb-2 text-sm font-medium text-gray-900 dark:text-gray-400"
-          >Your message</label
+          class="block mb-2 text-sm font-medium text-tertary"
         >
-        <p id="summary-section" class="mt-2 rounded border p-3 h-full"></p>
+          Your message
+        </label>
+        <p
+          id="summary-section"
+          class="bg-white mt-2 text-justify rounded border border-tertary p-3 h-full"
+        ></p>
       </div>
     </div>
   </div>
@@ -56,5 +57,7 @@ async function getSummary() {
     },
   });
   document.getElementById("summary-section").innerText = summary.data.data;
+  console.log();
+  // write for loop to print * 5
 }
 </script>
