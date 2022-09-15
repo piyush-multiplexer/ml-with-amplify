@@ -3,7 +3,7 @@
     <template v-slot="{ user, signOut }">
       <template v-if="user">
         <AppHeader :user="user" :sign-out="signOut"></AppHeader>
-        <router-view :user="user"></router-view>
+        <router-view class="scrollbar" :user="user"></router-view>
       </template>
     </template>
   </authenticator>
