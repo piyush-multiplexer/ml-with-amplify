@@ -1,37 +1,29 @@
 <template>
-  <div class="font-sans antialiased" id="app">
-    <nav class="flex items-center justify-between flex-wrap bg-teal-100 p-6">
-      <div class="flex items-center flex-no-shrink text-red-600 mr-6">
-        <span class="font-semibold text-xl tracking-tight">Demo</span>
+  <div class="font-mono antialiased">
+    <nav class="flex items-center justify-between flex-wrap bg-primary p-5">
+      <div class="flex items-center text-secondary">
+        <span class="font-bold text-2xl tracking-tight">Demo</span>
       </div>
       <div class="block w-full flex-grow sm:flex sm:items-center sm:w-auto">
-        <div class="text-sm sm:flex-grow">
-          <a
-            href="#responsive-header"
-            class="no-underline block mt-4 sm:inline-block sm:mt-0 text-teal-lighter hover:text-white mr-4"
-          >
-            Docs
-          </a>
+        <div class="flex-grow"></div>
+        <div class="font-semibold text-secondary mr-3">
+          {{ user.username }}
         </div>
         <div>
-          <h5>
-            {{ user.username }}
-          </h5>
-        </div>
-        <div>
-          <button @click="signOut"
-            class="no-underline inline-block text-sm px-4 py-2 leading-none border rounded text-red border-white hover:border-transparent hover:text-teal hover:bg-white mt-4 sm:mt-0"
+          <button
+            @click="signOut"
+            class="no-underline inline-block text-sm px-4 py-2 leading-none tracking-wide border rounded font-medium text-secondary border-tertary mt-4 sm:mt-0"
           >
-            Log Out
-        </button>
+            LOGOUT
+          </button>
         </div>
       </div>
     </nav>
   </div>
 </template>
 <script setup>
-import { defineProps, ref } from 'vue';
-const props = defineProps(['user','signOut'])
-const signOut = ref(props.signOut)
-const user = ref(props.user)
+import { defineProps, ref } from "vue";
+const props = defineProps(["user", "signOut"]);
+const signOut = ref(props.signOut);
+const user = ref(props.user);
 </script>
