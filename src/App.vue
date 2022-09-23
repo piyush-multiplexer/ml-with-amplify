@@ -4,6 +4,7 @@
       <template v-if="user">
         <AppHeader :user="user" :sign-out="signOut"></AppHeader>
         <router-view class="scrollbar" :user="user"></router-view>
+        <AppFooter></AppFooter>
       </template>
     </template>
   </authenticator>
@@ -14,6 +15,7 @@ import "@aws-amplify/ui-vue/styles.css";
 import { Amplify, Auth } from "aws-amplify";
 import awsconfig from "./aws-exports";
 import AppHeader from "./components/app-header.vue";
+import AppFooter from "./components/app-footer.vue";
 
 Amplify.configure(awsconfig);
 Auth.configure(awsconfig);
