@@ -2,7 +2,7 @@
   <div class="font-mono antialiased">
     <nav class="flex items-center justify-between flex-wrap bg-primary p-5">
       <div class="flex items-center text-secondary">
-        <span class="font-bold text-2xl tracking-tight">Demo</span>
+        <span class="font-bold text-2xl tracking-tight">Text Summarizer</span>
       </div>
       <div class="block w-full flex-grow sm:flex sm:items-center sm:w-auto">
         <div class="flex-grow"></div>
